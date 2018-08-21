@@ -1,0 +1,8 @@
+
+\.vs
+src/bin
+src/obj
+tests/IntegrationTests/bin
+tests/IntegrationTests/obj
+tests/TestApi/bin
+tests/TestApi/obj
