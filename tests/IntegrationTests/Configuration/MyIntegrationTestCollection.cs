@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ulinq.AspNetCore.IntegrationTesting;
+using URLinq.AspNetCore.IntegrationTesting;
 using Xunit;
 
 namespace IntegrationTests.Configuration

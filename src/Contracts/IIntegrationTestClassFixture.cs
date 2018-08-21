@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Xunit.Abstractions;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Contracts
+namespace URLinq.AspNetCore.IntegrationTesting.Contracts
 {
     /// <summary>
     /// Defines a class fixture.  Class fixtures are shared amongst tests within the same test class.

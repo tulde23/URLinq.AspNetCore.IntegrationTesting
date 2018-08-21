@@ -4,11 +4,11 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ulinq.AspNetCore.IntegrationTesting.Contracts;
-using ulinq.AspNetCore.IntegrationTesting.Logging;
+using URLinq.AspNetCore.IntegrationTesting.Contracts;
+using URLinq.AspNetCore.IntegrationTesting.Logging;
 using Xunit.Abstractions;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Fixtures
+namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 {
     public class IntegrationTestClassFixture : IIntegrationTestClassFixture
     {

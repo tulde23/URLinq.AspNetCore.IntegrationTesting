@@ -1,7 +1,7 @@
-﻿using ulinq.AspNetCore.IntegrationTesting.Contracts;
+﻿using URLinq.AspNetCore.IntegrationTesting.Contracts;
 using Xunit.Abstractions;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Logging
+namespace URLinq.AspNetCore.IntegrationTesting.Logging
 {
     internal class InternalLogger : ITestLogger
     {

@@ -1,5 +1,5 @@
-﻿using ulinq.AspNetCore.IntegrationTesting.Attributes;
-using ulinq.AspNetCore.IntegrationTesting.Fixtures;
+﻿using URLinq.AspNetCore.IntegrationTesting.Attributes;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
 
 [assembly: SolutionContentRoot("tests/TestApi")]
 

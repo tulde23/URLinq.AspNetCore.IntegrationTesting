@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ulinq.AspNetCore.IntegrationTesting.Contracts;
+using URLinq.AspNetCore.IntegrationTesting.Contracts;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Fixtures
+namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 {
     public static class IntegrationTestClassFixtureExtensions
     {

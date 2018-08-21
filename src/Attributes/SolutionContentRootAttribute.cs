@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Attributes
+namespace URLinq.AspNetCore.IntegrationTesting.Attributes
 {
     /// <summary>
     /// Sets the solution content root for an integration test assembly.

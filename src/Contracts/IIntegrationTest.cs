@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using ulinq.AspNetCore.IntegrationTesting.Fixtures;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Contracts
+namespace URLinq.AspNetCore.IntegrationTesting.Contracts
 {
     /// <summary>
     /// Defines an integration test accepting both a collection and class fixture.

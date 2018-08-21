@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using IntegrationTests.Configuration;
 using TestApi.Controllers;
-using ulinq.AspNetCore.IntegrationTesting.Fixtures;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
 using Xunit;
 using Xunit.Abstractions;
 

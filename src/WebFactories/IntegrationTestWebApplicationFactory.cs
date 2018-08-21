@@ -5,9 +5,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
-using ulinq.AspNetCore.IntegrationTesting.Attributes;
+using URLinq.AspNetCore.IntegrationTesting.Attributes;
 
-namespace ulinq.AspNetCore.IntegrationTesting
+namespace URLinq.AspNetCore.IntegrationTesting
 {
     public class IntegrationTestWebApplicationFactory<TEntryPoint> : WebApplicationFactory<TEntryPoint> where TEntryPoint : class
     {

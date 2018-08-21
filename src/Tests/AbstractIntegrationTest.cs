@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using ulinq.AspNetCore.IntegrationTesting.Contracts;
-using ulinq.AspNetCore.IntegrationTesting.Fixtures;
+using URLinq.AspNetCore.IntegrationTesting.Contracts;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace ulinq.AspNetCore.IntegrationTesting
+namespace URLinq.AspNetCore.IntegrationTesting
 {
     /// <summary>
     /// An abstract integration test class that uses an xunit collection fixture and class fixture.
@@ -15,7 +15,7 @@ namespace ulinq.AspNetCore.IntegrationTesting
     /// <typeparam name="TEntryPoint">The type of the entry point.</typeparam>
     /// <typeparam name="TWebApplicationFactory">The type of the web application factory.</typeparam>
     /// <typeparam name="TFixture">The type of the fixture.</typeparam>
-    /// <seealso cref="ulinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTest{TEntryPoint, TWebApplicationFactory, TFixture}" />
+    /// <seealso cref="URLinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTest{TEntryPoint, TWebApplicationFactory, TFixture}" />
     public abstract class AbstractIntegrationTest<TEntryPoint, TWebApplicationFactory, TFixture> :
         IIntegrationTest<TEntryPoint, TWebApplicationFactory, TFixture>,
         IClassFixture<IntegrationTestClassFixture>
@@ -59,7 +59,7 @@ namespace ulinq.AspNetCore.IntegrationTesting
     /// </summary>
     /// <typeparam name="TEntryPoint">The type of the entry point.</typeparam>
     /// <typeparam name="TFixture">The type of the fixture.</typeparam>
-    /// <seealso cref="ulinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTest{TEntryPoint, TWebApplicationFactory, TFixture}" />
+    /// <seealso cref="URLinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTest{TEntryPoint, TWebApplicationFactory, TFixture}" />
     public abstract class AbstractIntegrationTest<TEntryPoint, TFixture> :
         AbstractIntegrationTest<TEntryPoint, IntegrationTestWebApplicationFactory<TEntryPoint>, TFixture>,
         IClassFixture<IntegrationTestClassFixture>

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
-using ulinq.AspNetCore.IntegrationTesting.Contracts;
+using URLinq.AspNetCore.IntegrationTesting.Contracts;
 using Xunit.Abstractions;
 
-namespace ulinq.AspNetCore.IntegrationTesting
+namespace URLinq.AspNetCore.IntegrationTesting
 {
     /// <summary>
     /// Defines a common test fixture.

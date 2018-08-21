@@ -2,14 +2,14 @@
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Fixtures
+namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 {
     /// <summary>
     /// A default implementation of an xunit collection fixture.
     /// </summary>
     /// <typeparam name="TEntryPoint">The type of the entry point.</typeparam>
     /// <typeparam name="TWebApplicationFactory">The type of the web application factory.</typeparam>
-    /// <seealso cref="ulinq.AspNetCore.IntegrationTesting.IIntegrationTestCollectionFixture{TEntryPoint, TWebApplicationFactory}" />
+    /// <seealso cref="URLinq.AspNetCore.IntegrationTesting.IIntegrationTestCollectionFixture{TEntryPoint, TWebApplicationFactory}" />
     public class IntegrationTestCollectionFixture<TEntryPoint, TWebApplicationFactory> :
         IIntegrationTestCollectionFixture<TEntryPoint, TWebApplicationFactory>
           where TEntryPoint : class

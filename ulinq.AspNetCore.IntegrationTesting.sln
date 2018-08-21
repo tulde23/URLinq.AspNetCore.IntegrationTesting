@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ulinq.AspNetCore.IntegrationTesting", "src\ulinq.AspNetCore.IntegrationTesting.csproj", "{FF0C29E6-F40B-4373-8CE0-9BFB2FBFD72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLinq.AspNetCore.IntegrationTesting", "src\URLinq.AspNetCore.IntegrationTesting.csproj", "{FF0C29E6-F40B-4373-8CE0-9BFB2FBFD72E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{95234580-5503-4A33-A380-01B4C6ECD7C3}"
 EndProject

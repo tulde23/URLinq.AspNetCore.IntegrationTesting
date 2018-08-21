@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ulinq.AspNetCore.IntegrationTesting.Contracts
+namespace URLinq.AspNetCore.IntegrationTesting.Contracts
 {
     /// <summary>
     /// A common logger

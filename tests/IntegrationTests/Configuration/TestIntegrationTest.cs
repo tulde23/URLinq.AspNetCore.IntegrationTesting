@@ -1,5 +1,5 @@
-﻿using ulinq.AspNetCore.IntegrationTesting;
-using ulinq.AspNetCore.IntegrationTesting.Fixtures;
+﻿using URLinq.AspNetCore.IntegrationTesting;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
 using Xunit;
 using Xunit.Abstractions;
 

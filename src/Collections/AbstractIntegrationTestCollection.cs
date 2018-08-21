@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace ulinq.AspNetCore.IntegrationTesting
+namespace URLinq.AspNetCore.IntegrationTesting
 {
     /// <summary>
     /// A marker class denoting a test collection and binding it to a specific fixture.  All implementors must
