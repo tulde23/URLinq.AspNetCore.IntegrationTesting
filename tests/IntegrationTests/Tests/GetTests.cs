@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using IntegrationTests.Configuration;
 using TestApi.Controllers;
@@ -20,7 +19,7 @@ namespace IntegrationTests.Tests
         [Fact]
         public async Task GetListOfValues()
         {
-            var response = await this.ClassFixture.InvokeAsyncWithResults<ValuesController, List<string>>(controller => controller.Get());
+            var response = await ClassFixture.ManyAsync<ValuesController, string>(controller => controller.Get());
             Assert.NotNull(response);
             Assert.True(response.Count() > 0);
         }
@@ -29,7 +28,7 @@ namespace IntegrationTests.Tests
         [InlineData(1)]
         public async Task GetSingleValue(int key)
         {
-            var response = await this.ClassFixture.InvokeAsyncWithResults<ValuesController, string>(controller => controller.Get(key));
+            var response = await ClassFixture.SingleAsync<ValuesController, string>(controller => controller.Get(key));
             Assert.NotNull(response);
         }
     }
