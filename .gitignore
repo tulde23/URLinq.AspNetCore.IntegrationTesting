@@ -6,3 +6,5 @@ tests/IntegrationTests/bin
 tests/IntegrationTests/obj
 tests/TestApi/bin
 tests/TestApi/obj
+
+tools/URLinq\.CLI/obj/

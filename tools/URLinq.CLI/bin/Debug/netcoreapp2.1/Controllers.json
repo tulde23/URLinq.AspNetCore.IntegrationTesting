@@ -1,0 +1,697 @@
+[
+  {
+    "ProjectPath": "C:\\Development\\aggregato\\src\\Aggregato.API\\Aggregato.API.csproj",
+    "SolutionPath": "C:\\Development\\aggregato\\Aggregato.API.sln",
+    "Controllers": [
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "AuditController",
+        "Actions": [
+          {
+            "ActionName": "RebuildIndex",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Correlations",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "auditLogSearchRequest",
+                "ParameterTypeName": "AuditLogSearchRequest",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Terms",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "term",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "Histogram",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "interval",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Duration",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "interval",
+                "ParameterTypeName": "double",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "AuthenticationController",
+        "Actions": [
+          {
+            "ActionName": "AuthenticateClientAsync",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "clientCredential",
+                "ParameterTypeName": "ClientCredential",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "LoginAsync",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "loginRequest",
+                "ParameterTypeName": "BSB.Microservices.SSO.Client.Request.LoginRequest",
+                "ParameterTypeNamespace": "BSB.Microservices.SSO.Client.Request",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "RefreshTokenAsync",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "refreshTokenRequest",
+                "ParameterTypeName": "BSB.Microservices.SSO.Client.Request.RefreshTokenRequest",
+                "ParameterTypeNamespace": "BSB.Microservices.SSO.Client.Request",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "DiagnosticsController",
+        "Actions": [
+          {
+            "ActionName": "Elastic",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Log",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "aggregatoLogSearchRequest",
+                "ParameterTypeName": "AggregatoLogSearchRequest",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "ReqeustRabbitHealth",
+            "Summary": "",
+            "Parameters": []
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "PlayersController",
+        "Actions": [
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "batchSize",
+                "ParameterTypeName": "int?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Search",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "term",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "QuickSearch",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "quickSearchRequest",
+                "ParameterTypeName": "QuickSearchRequest",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "Graph",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "id",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "PortalsController",
+        "Actions": [
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Search",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "term",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "ByLocation",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "model",
+                "ParameterTypeName": "PortalSearchRequest",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "ProgramDivisionsController",
+        "Actions": [
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Search",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "model",
+                "ParameterTypeName": "ProgramDivisionsSearchRequest",
+                "ParameterTypeNamespace": "<global namespace>",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "TeamEventController",
+        "Actions": [
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "batchSize",
+                "ParameterTypeName": "int?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "TeamsController",
+        "Actions": [
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "batchSize",
+                "ParameterTypeName": "int?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Sync",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "IndexFull",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "batchSize",
+                "ParameterTypeName": "int?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeams",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "email",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "pageSize",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "pageNumber",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Search",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "term",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamDetail",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamPlayers",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "pageSize",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "pageNumber",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamPlayerDetail",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "playerId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamVolunteers",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "pageSize",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "pageNumber",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamVolunteerDetail",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "volunteerId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamMatches",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "pageSize",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "pageNumber",
+                "ParameterTypeName": "int",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "GetTeamMatchDetail",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "teamId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              },
+              {
+                "ParameterName": "matchId",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Namespace": "Aggregato.API.Controllers",
+        "ControllerName": "VolunteersController",
+        "Actions": [
+          {
+            "ActionName": "Index",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "bulkOnly",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "skipBulk",
+                "ParameterTypeName": "bool?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              },
+              {
+                "ParameterName": "batchSize",
+                "ParameterTypeName": "int?",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": false
+              }
+            ]
+          },
+          {
+            "ActionName": "Clone",
+            "Summary": "",
+            "Parameters": []
+          },
+          {
+            "ActionName": "Search",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "term",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          },
+          {
+            "ActionName": "Graph",
+            "Summary": "",
+            "Parameters": [
+              {
+                "ParameterName": "id",
+                "ParameterTypeName": "string",
+                "ParameterTypeNamespace": "System",
+                "ParameterComment": null,
+                "Required": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

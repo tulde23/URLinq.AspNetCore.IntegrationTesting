@@ -1,0 +1,15 @@
+﻿using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using URLinq.AspNetCore.IntegrationTesting.Fixtures;
+
+namespace IntegrationTests.Controllers
+{
+ 
+    public class <#ControllerName#>Tests 
+    {
+	      <#TestMethods#>
+	}
+
+	
+}
