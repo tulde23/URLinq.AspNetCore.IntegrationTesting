@@ -18,10 +18,17 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         public TWebApplicationFactory Factory { get; private set; }
         public HttpClient Client { get; private set; }
 
+        private bool _bootstrapped = false;
+
         public void Bootstrap()
         {
+            if (_bootstrapped)
+            {
+                return;
+            }
             Factory = Activator.CreateInstance<TWebApplicationFactory>();
             Client = Factory.CreateClient();
+            _bootstrapped = true;
         }
 
         public void Dispose()

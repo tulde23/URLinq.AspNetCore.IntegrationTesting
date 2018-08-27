@@ -11,6 +11,16 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>AspNetCore, Integration, Controllers, Testing, linq, netcore,integration-testing</PackageTags>
     <IsPackable>true</IsPackable>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\URLinq.AspNetCore.IntegrationTesting.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\URLinq.AspNetCore.IntegrationTesting.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,5 +29,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.1.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
   </ItemGroup>
-
 </Project>

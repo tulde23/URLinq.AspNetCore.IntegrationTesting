@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using URLinq.AspNetCore.IntegrationTesting.Contracts;
 
 namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 {
+    /// <summary>
+    /// Extension methods.
+    /// </summary>
     public static class IntegrationTestClassFixtureExtensions
     {
         /// <summary>
@@ -16,10 +20,12 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         /// <param name="client">The client.</param>
         /// <param name="expression">The expression.</param>
+        /// <param name="headerBuilder">The header builder.</param>
         /// <returns></returns>
-        public static async Task<IEnumerable<TResponse>> ManyAsync<TController, TResponse>(this IIntegrationTestClassFixture client, Expression<Func<TController, object>> expression) where TController : ControllerBase
+        public static async Task<IEnumerable<TResponse>> ManyAsync<TController, TResponse>(this IIntegrationTestClassFixture client,
+            Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            return await client.InvokeAsyncWithResults<TController, IEnumerable<TResponse>>(expression);
+            return await client.InvokeAsyncWithResults<TController, IEnumerable<TResponse>>(expression, headerBuilder);
         }
 
         /// <summary>
@@ -30,10 +36,13 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         /// <typeparam name="TResponse">The type of the response.</typeparam>
         /// <param name="client">The client.</param>
         /// <param name="expression">The expression.</param>
+        /// <param name="headerBuilder">The header builder.</param>
         /// <returns></returns>
-        public static async Task<TResponse> SingleAsync<TController, TResponse>(this IIntegrationTestClassFixture client, Expression<Func<TController, object>> expression) where TController : ControllerBase
+        public static async Task<TResponse> SingleAsync<TController, TResponse>(this IIntegrationTestClassFixture client,
+            Expression<Func<TController, object>> expression,
+            Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            return await client.InvokeAsyncWithResults<TController, TResponse>(expression);
+            return await client.InvokeAsyncWithResults<TController, TResponse>(expression,headerBuilder);
         }
     }
 }

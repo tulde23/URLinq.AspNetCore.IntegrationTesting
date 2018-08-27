@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Xunit.Abstractions;
@@ -43,7 +44,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Contracts
         /// <param name="expression">The expression.</param>
         /// <returns></returns>
         HttpRequestMessage CreateHttpRequestMessage<TController, TResponse>(
-             Expression<Func<TController, TResponse>> expression) where TController : ControllerBase;
+             Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase;
 
         /// <summary>
         /// Invokes a controller action async.
@@ -53,7 +54,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Contracts
         /// <param name="expression">The expression.</param>
         /// <returns></returns>
         Task<TResponse> InvokeAsyncWithResults<TController, TResponse>(
-            Expression<Func<TController, TResponse>> expression) where TController : ControllerBase;
+            Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase;
 
         /// <summary>
         /// Invokes a controller action async.
@@ -63,17 +64,17 @@ namespace URLinq.AspNetCore.IntegrationTesting.Contracts
         /// <param name="expression">The expression.</param>
         /// <returns></returns>
         Task<TResponse> InvokeAsyncWithResults<TController, TResponse>(
-            Expression<Func<TController, object>> expression) where TController : ControllerBase;
+            Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase;
 
         /// <summary>
         /// Invokes a controller action async.
         /// </summary>
         /// <typeparam name="TController">The type of the controller.</typeparam>
-        /// <typeparam name="TResponse">The type of the response.</typeparam>
         /// <param name="expression">The expression.</param>
+        /// <param name="headerBuilder">The header builder.</param>
         /// <returns></returns>
         Task InvokeAsyncVoid<TController>(
-            Expression<Func<TController, object>> expression) where TController : ControllerBase;
+            Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase;
 
     }
 }
