@@ -25,7 +25,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         public static async Task<IEnumerable<TResponse>> ManyAsync<TController, TResponse>(this IIntegrationTestClassFixture client,
             Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            return await client.InvokeAsyncWithResults<TController, IEnumerable<TResponse>>(expression);
+            return await client.InvokeAsyncWithResults<TController, IEnumerable<TResponse>>(expression, headerBuilder);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
             Expression<Func<TController, object>> expression,
             Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            return await client.InvokeAsyncWithResults<TController, TResponse>(expression);
+            return await client.InvokeAsyncWithResults<TController, TResponse>(expression,headerBuilder);
         }
     }
 }
