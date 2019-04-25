@@ -11,8 +11,8 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>AspNetCore, Integration, Controllers, Testing, linq, netcore,integration-testing</PackageTags>
     <IsPackable>true</IsPackable>
-    <Version>2.2.0</Version>
-    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <Version>2.2.1</Version>
+    <AssemblyVersion>2.2.1.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="URLinq" Version="2.2.0" />
+    <PackageReference Include="URLinq" Version="2.2.1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="xunit" Version="2.4.0" />

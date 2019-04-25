@@ -14,7 +14,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Logging
 
         public void Write(string message)
         {
-           // TestOutputHelper?.WriteLine(message);
+            TestOutputHelper?.WriteLine(message);
         }
     }
 }

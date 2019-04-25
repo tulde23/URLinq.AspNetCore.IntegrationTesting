@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
 using System.Linq.Expressions;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using URLinq.AspNetCore.IntegrationTesting.Contracts;
 using URLinq.AspNetCore.IntegrationTesting.Logging;
 using Xunit.Abstractions;
@@ -12,25 +13,21 @@ using Xunit.Abstractions;
 namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 {
     /// <summary>
-    /// 
     /// </summary>
-    /// <seealso cref="URLinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTestClassFixture" />
+    /// <seealso cref="URLinq.AspNetCore.IntegrationTesting.Contracts.IIntegrationTestClassFixture"/>
     public class IntegrationTestClassFixture : IIntegrationTestClassFixture
     {
         /// <summary>
-        /// Gets the logger.  Loggers are scoped per class, hence the class fixture designation.
+        /// Gets the logger. Loggers are scoped per class, hence the class fixture designation.
         /// </summary>
-        /// <value>
-        /// The logger.
-        /// </value>
+        /// <value>The logger.</value>
         public ITestLogger Logger { get; private set; }
 
         /// <summary>
-        /// Gets the client.  The HttpClient is shared across test classes.  It will be initialized within a collection.
+        /// Gets the client. The HttpClient is shared across test classes. It will be initialized
+        /// within a collection.
         /// </summary>
-        /// <value>
-        /// The client.
-        /// </value>
+        /// <value>The client.</value>
         public HttpClient Client { get; private set; }
 
         /// <summary>
@@ -42,6 +39,20 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         {
             Logger = new InternalLogger(testOutputHelper);
             Client = client;
+        }
+
+        private void Debug<TController, TResponse>(
+             Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null, HttpRequestMessage message = null) where TController : ControllerBase
+        {
+            var controllerAction = ControllerActionFactory.GetAction(expression);
+
+            var sb = new StringBuilder("ControllerAction");
+            sb.AppendLine();
+            sb.AppendLine(JsonConvert.SerializeObject(controllerAction, Formatting.Indented));
+            sb.AppendLine();
+            sb.AppendLine("Route");
+            sb.AppendLine(message.RequestUri.ToString());
+            Logger.Write(sb.ToString());
         }
 
         /// <summary>
@@ -57,8 +68,8 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
              Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
             var message = RouteHelper.BuildRequestMessage(expression);
-            // Logger.Write($"Invoking URL {message.RequestUri.ToString()}");
             headerBuilder?.Invoke(message.Headers);
+            Debug(expression, headerBuilder, message);
             return message;
         }
 
@@ -74,7 +85,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         public async Task<TResponse> InvokeAsyncWithResults<TController, TResponse>(
             Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            var message = CreateHttpRequestMessage(expression,headerBuilder);
+            var message = CreateHttpRequestMessage(expression, headerBuilder);
             var response = await Client.SendAsync(message);
             var dataAsString = await response.Content.ReadAsStringAsync();
             response.EnsureSuccessStatusCode();
@@ -100,7 +111,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         public async Task<TResponse> InvokeAsyncWithResults<TController, TResponse>(
             Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            var response = await Client.SendAsync(CreateHttpRequestMessage(expression,headerBuilder));
+            var response = await Client.SendAsync(CreateHttpRequestMessage(expression, headerBuilder));
             var dataAsString = await response.Content.ReadAsStringAsync();
             response.EnsureSuccessStatusCode();
             var name = typeof(TResponse).FullName;
@@ -135,7 +146,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
             {
                 responseType = responseType.GetGenericArguments()[0];
             }
-            var response = DispatchRequest(Client, expression,headerBuilder).GetAwaiter().GetResult();
+            var response = DispatchRequest(Client, expression, headerBuilder).GetAwaiter().GetResult();
             var result = JsonConvert.DeserializeObject(response, responseType);
             var method = typeof(Task).GetMethod("FromResult");
             var genericMethod = method.MakeGenericMethod(responseType);
@@ -153,7 +164,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         /// <returns></returns>
         private async Task<string> DispatchRequest<TController, TResponse>(HttpClient client, Expression<Func<TController, TResponse>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            var message = CreateHttpRequestMessage(expression,headerBuilder);
+            var message = CreateHttpRequestMessage(expression, headerBuilder);
             var response = await client.SendAsync(message);
             var dataAsString = await response.Content.ReadAsStringAsync();
             response.EnsureSuccessStatusCode();
@@ -169,7 +180,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         /// <returns></returns>
         public async Task InvokeAsyncVoid<TController>(Expression<Func<TController, object>> expression, Action<HttpRequestHeaders> headerBuilder = null) where TController : ControllerBase
         {
-            var message = CreateHttpRequestMessage(expression,headerBuilder);
+            var message = CreateHttpRequestMessage(expression, headerBuilder);
             var response = await Client.SendAsync(message);
             response.EnsureSuccessStatusCode();
         }
