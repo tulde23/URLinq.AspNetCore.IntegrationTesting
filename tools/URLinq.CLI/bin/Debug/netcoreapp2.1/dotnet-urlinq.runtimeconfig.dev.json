@@ -3,6 +3,7 @@
     "additionalProbingPaths": [
       "C:\\Users\\jtully\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\jtully\\.nuget\\packages",
+      "C:\\ProgramData\\Xamarin\\NuGet",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

@@ -33,6 +33,7 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
 
         public void Dispose()
         {
+
             if (Client != null)
             {
                 Client.Dispose();

@@ -2,12 +2,14 @@ C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\Debug\netcoreapp2.1\dotnet-urlinq.runtimeconfig.json
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\Debug\netcoreapp2.1\dotnet-urlinq.runtimeconfig.dev.json
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\Debug\netcoreapp2.1\dotnet-urlinq.dll
+C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\Debug\netcoreapp2.1\dotnet-urlinq.pdb
+C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.csprojAssemblyReference.cache
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.Assets.Code.resources
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.csproj.GenerateResource.cache
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.csproj.CoreCompileInputs.cache
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.AssemblyInfoInputs.cache
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.AssemblyInfo.cs
-C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\bin\Debug\netcoreapp2.1\dotnet-urlinq.pdb
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\dotnet-urlinq.dll
 C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\dotnet-urlinq.pdb
-C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.csprojAssemblyReference.cache
+C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.shiminput.cache
+C:\Development\URLinq\URLinq.AspNetCore.IntegrationTesting\tools\URLinq.CLI\obj\Debug\netcoreapp2.1\URLinq.CLI.shimcreated.sentinel
