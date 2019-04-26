@@ -46,11 +46,12 @@ namespace URLinq.AspNetCore.IntegrationTesting.Fixtures
         {
             var controllerAction = ControllerActionFactory.GetAction(expression);
 
-            var sb = new StringBuilder("ControllerAction");
+            var sb = new StringBuilder();
             sb.AppendLine();
-            sb.AppendLine(JsonConvert.SerializeObject(controllerAction, Formatting.Indented));
+            sb.AppendLine($"Controller:{controllerAction.Controller}");
+            sb.AppendLine($"Action:{controllerAction.ActionName}");
+            sb.AppendLine($"Route Segments:{string.Join(Environment.NewLine, controllerAction.RouteSegments)}");
             sb.AppendLine();
-            sb.AppendLine("Route");
             sb.AppendLine(message.RequestUri.ToString());
             Logger.Write(sb.ToString());
         }

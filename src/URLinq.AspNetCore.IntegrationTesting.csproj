@@ -4,15 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Provides some additional xunit abstractions to make integration tests easier.</Description>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/tulde23/ulinq/master/lic.txt</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/tulde23/URLinq.AspNetCore.IntegrationTesting</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/tulde23/ulinq/master/u.jpg</PackageIconUrl>
     <RepositoryUrl>https://github.com/tulde23/URLinq.AspNetCore.IntegrationTesting</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>AspNetCore, Integration, Controllers, Testing, linq, netcore,integration-testing</PackageTags>
     <IsPackable>true</IsPackable>
-    <Version>2.2.1</Version>
-    <AssemblyVersion>2.2.1.0</AssemblyVersion>
+    <Version>2.2.3</Version>
+    <AssemblyVersion>2.2.3.0</AssemblyVersion>
+    <PackageLicenseFile>lic.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -24,9 +25,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="URLinq" Version="2.2.1" />
+    <PackageReference Include="URLinq" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="xunit" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\lic.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>
